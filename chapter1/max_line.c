@@ -32,7 +32,10 @@ int getLine(char *line, int limit)
 			return len;
 		}
 	}
-	return 0;
+	line[len] = '\0';
+	while ((c = getchar()) != EOF && c != '\n') ++len;
+	if (c == '\n') ++len;
+	return len;
 }
 void copy(char *from, char *to)
 {
