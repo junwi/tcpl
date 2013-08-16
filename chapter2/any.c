@@ -2,6 +2,7 @@
 
 int any(char *s1, char *s2)
 {
+	if (!*s2) return -1;
 	int p = 0;
 	while (s1[p]) {
 		char *a = s1 + p, *b = s2;

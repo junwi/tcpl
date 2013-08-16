@@ -5,7 +5,6 @@ void trim(char *str)
 	while (*str != '\0') {
 		if (*str != ' ' && *str != '\t') p = str;
 		str++;
-		printf("%c", *p);
 	}
 	printf("|\n");
 	*(++p) = '\0';

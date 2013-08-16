@@ -2,6 +2,7 @@
 int rightrot(int x, int n)
 {
 	int size = sizeof(x) * 8;
+	n = n % size;
 	size = size - n;
 	unsigned int a = x;
 	return (a >> n) | (a << size);
